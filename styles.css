@@ -1,0 +1,164 @@
+@font-face {
+    font-family: norse;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
+:root {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    width: 100vw;
+}
+
+.side-image {
+    height: 100vh;
+    min-width: 300px;
+    flex: 4;
+    background-size: cover;
+    background-image: url(./images/birch.jpg);
+    color: white;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    min-height: 75px;
+    margin-top: 20vh;
+    background-color: black;
+    opacity: 0.5;
+    gap: 10px;
+}
+
+.banner img {
+    margin: 5px;
+}
+
+.banner div {
+    font-family: norse, sans-serif;
+    font-size: 50px;
+    margin: auto 0;
+}
+
+.credit {
+    margin-top: 60vh;
+    text-align: center;
+}
+
+.form-content {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 6;
+    min-width: 450px;
+    background-color: rgb(240, 234, 214);
+    color: rgb(50, 50, 50);
+}
+
+.sign-up {
+    font-weight: bolder;
+    padding: 0 25px; 
+}
+
+.form {
+    padding: 25px 25px;
+    background-color: whitesmoke;
+    margin: 0;
+    box-shadow: 1px 2.5px 2px 2.5px #888888;
+}
+
+.form-title {
+    font-weight: bolder;
+}
+
+#my-form {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 25px;
+}
+
+input {
+    width: 200px;
+    padding: 2.5px;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: solid 1px rgba(128, 128,128, 0.5);
+    border-radius: 5px;
+}
+
+input:focus {
+    border: none;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+    outline: none;
+}
+
+input:invalid:focus {
+    border: 2px solid rgb(245, 68, 68);
+}
+
+input:valid:focus {
+    border: 2px solid rgb(92, 245, 68);
+}
+
+.error {
+    color: rgb(245, 68, 68);
+    font-size: 0.5em;
+}
+
+button {
+    width: 10em;
+    padding: 10px;
+    margin-left: 25px;
+    font-size: 1.5em;
+    background-color: rgb(107, 210, 10);
+    border: solid 1px rgba(128, 128,128, 0.5);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(34, 199, 13);
+    border: solid 1.5px rgba(128, 128,128, 0.5);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+}
+
+.log-in {
+    margin-left: 25px;
+}
+
+a {
+    color: rgb(107, 210, 10);
+}
+
+@media screen and (max-width: 950px) {
+  
+    .main{
+      flex-direction: column;
+    }
+    .side-image{
+      width: 100vw;
+    }
+
+    .form-content {
+        gap: 25px;
+    }
+
+  }
