@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="script.js" defer></script>
     <title>odin-form</title>
 </head>
 <body>
@@ -30,39 +31,40 @@
         <form id="my-form">
           <div>
             <label for="first_name">First Name</label>
-            <input type="text" name="first_name" required>
-            <div class="error"></div>
+            <input type="text" name="first_name" required id="first-name">
+            <div class="error" id="first-error"></div>
           </div>
           <div>
             <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" required>
-            <div class="error"></div>
+            <input type="text" name="last_name" required id="last-name">
+            <div class="error" id="last-error"></div>
           </div>
           <div>
-            <label for="mail">Email</label>
-            <input type="email" name="mail" required>
-            <div class="error"></div>
+            <label for="email">Email</label>
+            <input type="email" name="email" required id="email">
+            <div class="error" id="email-error"></div>
           </div>
           <div>
             <label for="phone-number">Phone Number</label>
-            <input type="tel" for="phone-number" pattern='[0-9]{10}'>
-            <div class="error"></div>
+            <input type="tel" for="phone-number" pattern='[0-9]{10}' required
+            id="phone-number">
+            <div class="error" id="phone-error"></div>
           </div>
           <div>
             <label for="f-password">Password</label>
             <input type="password" name="f-password" required 
-            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
-            <div class="error"></div>
+            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' id="f-password">
+            <div class="error" id="f-password-error"></div>
           </div>
           <div>
-            <label for="conf-password">Conform Password</label>
-            <input type="password" name="conf-password" required 
-            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
-            <div class="error"></div>
+            <label for="c-password">Conform Password</label>
+            <input type="password" name="c-password" required 
+            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}' id="c-password">
+            <div class="error" id="c-password-error"></div>
           </div>
         </form>
       </div>
-      <button>Create Account</button>
+      <button type="submit" form="my-form">Create Account</button>
       <div class="log-in">Already have an account? <a href="#">Log In</a></div>
     </div>
   </div>
